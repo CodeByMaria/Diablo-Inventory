@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Diablo - Inventário</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="register-link">Register</a></li>
+                <li><a href="#" id="login-link">Login</a></li>
+                <li><a href="#" id="inventory-link">Inventory</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Formulário de cadastro -->
+    <div id="register-form" class="form-container" style="display: none;">
+        <h2>Cadastre-se</h2>
+        <form>
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Digite seu nome" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Formulário de login -->
+    <div id="login-form" class="form-container" style="display: block;">
+        <h2>Entrar</h2>
+        <form id="form-login">
+            <label for="email">Email</label>
+            <input type="email" id="email-login" placeholder="Digite seu email" required>
+            <label for="password">Senha</label>
+            <input type="password" id="password-login" placeholder="Digite sua senha" required>
+            <button type="submit">Login</button>
+            <p id="error-message" style="color: red;"></p>
+        </form>
+        <p><a href="#" id="reset-password-link">Esqueceu sua senha? Clique aqui!</a></p>
+    </div>
+
+    <!-- Novo conteúdo exibido após o login -->
+    <div id="logged-in-content" style="display: none;">
+        <h2>Bem-vindo, <span id="user-name">Usuário</span></h2>
+        <p>Agora você está logado!</p>
+        <div class="inventory-section">
+            <button class="inventory-button">Adicionar linhas</button>
+            <button class="inventory-button">Remover linhas</button>
+        </div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Conta</th>
+                    <th>Platinas</th>
+                    <th>Gema G5</th>
+                    <th>Safira</th>
+                    <th>Turmalinas</th>
+                    <th>Topázios</th>
+                    <th>Água Marinha</th>
+                    <th>Rubi</th>
+                    <th>Citrinas</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td><input type="text" placeholder=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                    <td><input type="number" value=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

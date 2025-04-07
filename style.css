@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Morpheus';
+    src: url('fonts/morpheus/MORPHEUS.TTF') format('truetype');
+}
+
+/* Estilização geral */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Morpheus', cursive;
+    background: url('https://wallpapercave.com/wp/wp3275981.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container para título e navegação */
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Estilização da navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Efeito de fogo inspirado na temática de Diablo */
+nav a:hover {
+    animation: diabloEffect 0.6s infinite alternate;
+}
+
+@keyframes diabloEffect {
+    0% {
+        color: #ff4500;
+        text-shadow: 2px 2px 2px #ff6347, 4px 4px 4px #8b0000;
+    }
+
+    100% {
+        color: #8b0000;
+        text-shadow: 2px 2px 2px #ff4500, 4px 4px 4px #ff6347;
+    }
+}
+
+/* Estilo para a formatação dos formulários */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    padding: 15px; /* Diminuir o padding */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.5); /* Brilho avermelhado */
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    color: #FF8C00; /* Cor do texto laranja */
+    border: 2px solid rgba(255, 69, 0, 0.3);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 24px; /* Diminuir o tamanho da fonte */
+}
+
+/* Estilização dos rótulos (Nome, Email, Senha) */
+.form-container label {
+    display: block;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+    font-weight: bold;
+    color: #FF8C00;
+    text-align: left;
+    margin: 5px 0 5px 10px; /* Diminuir a margem */
+}
+
+/* Campos de entrada */
+.form-container input {
+    width: 95%;
+    padding: 8px; /* Diminuir o padding */
+    margin-bottom: 10px; /* Diminuir o espaçamento entre os campos */
+    background-color: #222; /* Fundo escuro */
+    color: #FF8C00; /* Texto laranja */
+    border: 2px solid #8b0000; /* Borda vermelha */
+    border-radius: 5px;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-container button {
+    margin-top: 10px; /* Diminuir o topo */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    padding: 8px 12px;
+    background: linear-gradient(145deg, #5a1e1e, #2c0000);
+    color: #FF8C00;
+    font-size: 14px; /* Diminuir o tamanho da fonte */
+    font-family: 'Morpheus', cursive;
+    text-transform: uppercase;
+    border: 2px solid #8b0000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6),
+                0 0 20px rgba(255, 140, 0, 0.5),
+                inset 0 0 5px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: flameGlow 1.5s infinite alternate;
+}
+
+/* Cor do link "Esqueceu sua senha?" */
+#reset-password-link {
+    color:#FF8C00; /* A mesma cor do login */
+    text-decoration: none; /* Remove o sublinhado, se preferir */
+}
+
+#reset-password-link:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.form-container button:hover {
+    background: linear-gradient(145deg, #8b0000, #5a1e1e);
+    color: #FF8C00;
+    border-color: #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8),
+                0 0 25px rgba(255, 140, 0, 0.6),
+                inset 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Animação de brilho flamejante */
+@keyframes flameGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.4),
+                    0 0 20px rgba(255, 140, 0, 0.3),
+                    inset 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.6),
+                    0 0 25px rgba(255, 140, 0, 0.5),
+                    inset 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    max-width: 1000px; /* Limita o tamanho máximo da tabela */
+    margin: 20px auto; /* Centraliza a tabela com margem automática */
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+.inventory-button {
+    margin-right: 10px; /* Espaçamento entre os botões */
+    display: inline-block; /* Faz com que os botões fiquem lado a lado */
+    padding: 8px 12px;
+    background: linear-gradient(145deg, #5a1e1e, #2c0000);
+    color: #FF8C00;
+    font-size: 12px;
+    font-family: 'Morpheus', cursive;
+    text-transform: uppercase;
+    border: 2px solid #8b0000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6),
+                0 0 20px rgba(255, 140, 0, 0.5),
+                inset 0 0 5px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: flameGlow 1.5s infinite alternate;
+}
+
+.inventory-button:hover {
+    background: linear-gradient(145deg, #8b0000, #5a1e1e);
+    color: #FF8C00;
+    border-color: #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8),
+                0 0 25px rgba(255, 140, 0, 0.6),
+                inset 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+
+
+table th,
+table td {
+    padding: 6px;
+    border: 1px solid #FF8C00;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table th {
+    background-color: #8B0000;
+    color: #FF8C00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #333;
+    color: #FF8C00;
+    font-size: 14px;
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: #444;
+}
+
+table tbody tr:hover {
+    background-color: #5a1e1e;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+table tbody tr:nth-child(odd):hover {
+    background-color: #9B111E;
+}
+
+/* Estilo para inputs na tabela */
+table input[type="text"],
+table input[type="number"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #FF8C00;
+    background-color: #222;
+    color: #FF8C00;
+    text-align: center;
+    font-size: 70%;
+    transition: background-color 0.3s ease;
+}
+
+table input[type="number"]::-webkit-outer-spin-button,
+table input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+table input[type="text"]:focus,
+table input[type="number"]:focus {
+    outline: none;
+    background-color: #444;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.7);
+}
+
+table tbody tr td input {
+    background-color: #333;
+    color: #FF8C00;
+}
+
+/* Estilo padrão do site */
+body {
+    margin: 0;
+    font-family:Morpheus;
+    background-color: #111; /* Fundo padrão escuro */
+    color: white;
+}
+
+/* Estilo específico para a aba Inventory */
+.inventory-container {
+    background-image: url('img/img\ formulario.jpg'); /* Substitua pela imagem desejada */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Ajuste para o container do inventário */
+.inventory-container .table-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
