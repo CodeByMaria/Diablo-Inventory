@@ -16,8 +16,3 @@ Inclusão de vídeo (embedado do YouTube).
 Alternância entre seções (Home, Cadastro, Login, Inventário, Vendas).
 Botão de som com ícone animado (Font Awesome).
 
-Status do Projeto
-🚧 Em desenvolvimento
-
-(Implementar MySQL)
-
